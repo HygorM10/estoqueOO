@@ -122,7 +122,7 @@ namespace estoqueOO.Entities
 
         public double margemLucroPorcentagem()
         {
-            return (MargemLucro / PrecoVenda) * 100;
+            return (MargemLucro / PrecoCusto) * 100;
         }
 
         public override string ToString()
@@ -130,7 +130,7 @@ namespace estoqueOO.Entities
             return "Preco de Custo: " + PrecoCusto.ToString("F2", CultureInfo.InvariantCulture) + "\n" + 
                 "Preco de Venda: " + PrecoVenda.ToString("F2", CultureInfo.InvariantCulture) + "\n" +
                 "Margem de Lucro: " + MargemLucro.ToString("F2", CultureInfo.InvariantCulture) + "\n" + 
-                "Margem de Lucro Percentual (%): " + margemLucroPorcentagem().ToString("F2", CultureInfo.InvariantCulture);
+                "Margem de Lucro Percentual (%): " + margemLucroPorcentagem().ToString("F0", CultureInfo.InvariantCulture) + '%';
         }
     }
 }
